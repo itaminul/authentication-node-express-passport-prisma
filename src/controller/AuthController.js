@@ -15,7 +15,7 @@ USER_EXISTS_ALREADY,
 WRONG_PASSWORD,
 USER_DOES_NOT_EXIST
 } = require('../store/constant')
-const { config } = require('../store/config')
+// const { config } = require('../store/config')
 // const { user } = require('../../prisma/dbConnection')
 
 function createUser(email, password) {
@@ -25,7 +25,7 @@ function createUser(email, password) {
     }
     return new user(data)
 }
-const expiresInCount = "20s";
+const expiresInCount = "120s";
 exports.register = async(req, res, next) => {
     try {
         // console.log("req ",req)
