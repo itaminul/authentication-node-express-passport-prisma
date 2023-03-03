@@ -43,3 +43,9 @@ model Categroy {
   categoryName String?
   orgId Int?
 }
+
+model Products {
+  id Int @id @default(autoincrement())
+  productName String?
+  productImage String?
+}
